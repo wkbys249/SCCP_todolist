@@ -25,6 +25,11 @@ const addTask =(id, text)=>{
     const deleteBtn = document.createElement("input");
     const time = getNowTime();
 
+    tr.className = "box";
+    textElemenent.className = "el";
+    timeElemenent.className = "el time";
+    deleteBtn.className = "el deleteBtn";
+
     tr.id = id;
     textElemenent.textContent = text;
     timeElemenent.textContent = time;
@@ -35,7 +40,7 @@ const addTask =(id, text)=>{
     });
 
     tr.appendChild(textElemenent);
-    tr.appendChild(timeElemenent);
+    //tr.appendChild(timeElemenent);
     tr.appendChild(deleteBtn);
     todolist.insertBefore(tr, todolist.firstChild);
 }
