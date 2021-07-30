@@ -19,16 +19,17 @@ body{
     margin-left: auto;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 #textarea{
     font-size: 30px;
 }
 
-.box{
-    background-color:hsl(178, 100%, 90%);
-    width: 80%;
+#todolist{
+    width: 50%;
 }
+
 /*
 .time{
     position: relative;
@@ -39,8 +40,19 @@ body{
     left:auto;
     top:15px;
 }*/
+
+.text{
+    font-size:30px;
+    font-weight: bold;
+    float: left;
+}
+
+.ctrl{
+    float: right;
+}
+
 .deleteBtn{
-    display: inline-flex;
     width:50px;
     height:50px;
+    margin: auto 10px auto auto;
 }

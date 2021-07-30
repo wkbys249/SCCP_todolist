@@ -1,4 +1,8 @@
 "use strict";
+/**
+ * 見た目とか機能に一切納得がいっていない
+ * 入力欄に文字を入力 Enterで追加 削除ボタンで削除
+ */
 
 let count = 0;
 const todolist = document.getElementById("todolist");
@@ -20,15 +24,17 @@ const textareaEvent =(e)=>{
 
 const addTask =(id, text)=>{
     const tr = document.createElement("tr");
-    const textElemenent = document.createElement("h1");
+    const textElemenent = document.createElement("p");
     const timeElemenent = document.createElement("p");
+    const div=document.createElement("div");
     const deleteBtn = document.createElement("input");
     const time = getNowTime();
 
     tr.className = "box";
-    textElemenent.className = "el";
+    textElemenent.className = "el text";
     timeElemenent.className = "el time";
     deleteBtn.className = "el deleteBtn";
+    div.className = "el ctrl"
 
     tr.id = id;
     textElemenent.textContent = text;
@@ -41,7 +47,8 @@ const addTask =(id, text)=>{
 
     tr.appendChild(textElemenent);
     //tr.appendChild(timeElemenent);
-    tr.appendChild(deleteBtn);
+    div.appendChild(deleteBtn);
+    tr.appendChild(div);
     todolist.insertBefore(tr, todolist.firstChild);
 }
 
