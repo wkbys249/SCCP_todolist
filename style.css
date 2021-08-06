@@ -1,58 +1,117 @@
+.no-point-ul{
+    list-style-type: none;
+    padding: 0;
+}
+
 body{
-    background-color: darkgray;
+    background-color:rgb(228, 255, 255);
+}
+
+p{
+    margin:0;
+}
+
+#header{
+    background-color: white;
+    position: fixed;
+    width:100vw;
+    height: 50px;
+    margin: 0;
+    top: 0px;
+    left: 0px;
+    box-shadow: 0 0 5px black;
+    font-size: 30px;
+    text-align: center;
+    color: #4d4d4d;
+    font-weight: bold;
 }
 
 #wrapper{
     max-width: 800px;
+    width: 100vw;
+    min-height: 90vh;
     background-color:white;
-    width:90vw;
-    margin-right: auto;
-    margin-left: auto;
+    margin:50px auto 20px auto;
 }
 
 #container{
-    max-width: 700px;
-    width: 85vw;
-    min-height:100vh;
-    height:auto;
-    margin-right: auto;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    max-width: 500px;
+    width:100%;
+
+    margin:0px auto 0px auto;
 }
 
-#textarea{
-    font-size: 30px;
+.task{
+    display:flex;
+    flex-direction: row;
+    padding-bottom: 25px;
 }
 
-#todolist{
-    width: 50%;
+.top{
+    padding-top: 25px;
+    padding-bottom: 0px;
 }
 
-/*
-.time{
-    position: relative;
-    display:inline-flex;
-    margin-bottom: 0;
-    margin-top: 0;
-    font-size: 12px;
-    left:auto;
-    top:15px;
-}*/
+hr{
+    margin-bottom: 25px;
+}
+
+.text-box{
+    border: 1px solid rgb(141, 141, 141);
+    border-radius:50px;
+    height: 50px;
+    width: 300px;
+    flex-grow: 1;
+    display:flex;
+}
+
+.input-box{
+    height: 50px;
+    width: 300px;
+    flex-grow: 1;
+    display:flex;
+}
 
 .text{
-    font-size:30px;
-    font-weight: bold;
-    float: left;
+    font-size: 30px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: none;
+    outline: none;
+    background-color:rgba(255, 255, 255, 0);
+    padding-top:5px;
+    flex-grow: 1;
 }
 
-.ctrl{
-    float: right;
-}
-
-.deleteBtn{
-    width:50px;
+.button{
+    margin-left: 5px;
+    border: 3px solid rgb(141, 141, 141);
+    border-radius:50px;
     height:50px;
-    margin: auto 10px auto auto;
+    width:50px;
+    font-size:50px;
+    color:rgb(121, 121, 121);
+    background-color:rgba(255, 255, 255, 0);
+    /*margin-left: auto;*/
+    line-height: 47px;
+}
+
+.add-button{
+    background-color:rgb(255,255, 255);
+}
+
+.add-button:hover{
+    background-color:rgb(152, 255, 148);
+    box-shadow: 0 0 10px rgb(179, 179, 179);
+}
+.delete-button{
+    background-color:rgb(255,255, 255);
+}
+
+.delete-button:hover{
+    box-shadow: 0 0 10px rgb(179, 179, 179);
+    background-color:rgb(219, 81, 81);
+    color:white;
 }
